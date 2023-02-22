@@ -19,12 +19,14 @@ public class FacebookTimelineAdapter extends RecyclerView.Adapter<FacebookTimeli
     public FacebookTimelineAdapter(ArrayList<Facebook_Items> data) {
         this.data = data;
     }
+
     OnItemClick Onitemclick = null;
+
     @NonNull
     @Override
     public FacebookViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.facebook_items,parent,false);
+        View view = inflater.inflate(R.layout.facebook_items, parent, false);
         return new FacebookViewHolder(view);
     }
 
@@ -56,9 +58,10 @@ public class FacebookTimelineAdapter extends RecyclerView.Adapter<FacebookTimeli
     }
 
     class FacebookViewHolder extends RecyclerView.ViewHolder {
-        TextView User_title , Time , Post_text,Like_count;
-        Button Like_button , Comment_button , Share_button;
-        ImageView Post_icon , User_icon,Like_image;
+        TextView User_title, Time, Post_text, Like_count;
+        Button Like_button, Comment_button, Share_button;
+        ImageView Post_icon, User_icon, Like_image;
+
         public FacebookViewHolder(@NonNull View itemView) {
             super(itemView);
             User_title = itemView.findViewById(R.id.FaceBook_UserTitle);
