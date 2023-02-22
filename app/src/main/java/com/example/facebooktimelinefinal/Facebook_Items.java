@@ -1,8 +1,8 @@
 package com.example.facebooktimelinefinal;
 
 public class Facebook_Items {
-    String User_Title , Time , Post_text , Like_count , Like , comment,share;
-    int like_image , post_icon , user_icon;
+    String User_Title, Time, Post_text, Like_count, Like, comment, share;
+    int like_image, post_icon, user_icon;
 
     public Facebook_Items(String user_Title, String time, String post_text, String like_count, String like, String comment, String share, int like_image, int post_icon, int user_icon) {
         User_Title = user_Title;

@@ -10,9 +10,10 @@ import android.os.RecoverySystem;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-RecyclerView FacebookrecyclerView;
-FacebookTimelineAdapter facebookTimelineAdapter;
-ArrayList<Facebook_Items> data;
+    RecyclerView FacebookrecyclerView;
+    FacebookTimelineAdapter facebookTimelineAdapter;
+    ArrayList<Facebook_Items> data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,16 +27,17 @@ ArrayList<Facebook_Items> data;
             @Override
             public void OnItemclick(Facebook_Items facebook_items) {
                 Intent intent = new Intent(MainActivity.this, postdetails.class);
-                intent.putExtra("postauthe",Facebook_Items.class);
+                intent.putExtra("postauthe", Facebook_Items.class);
                 startActivity(intent);
             }
         };
 
     }
-    public void intializedata(){
+
+    public void intializedata() {
         data = new ArrayList<Facebook_Items>(1000);
-        for (int i = 0 ; i<1000;i++){
-            data.add(new Facebook_Items("User " ,"$i","hello $i","$i","like $i","comment $i","share $i",R.drawable.like_24,R.drawable.post_photo_24,R.drawable.account_24));
+        for (int i = 0; i < 1000; i++) {
+            data.add(new Facebook_Items("User ", "$i", "hello $i", "$i", "like $i", "comment $i", "share $i", R.drawable.like_24, R.drawable.post_photo_24, R.drawable.account_24));
         }
     }
 }
