@@ -15,8 +15,8 @@ Intent intent = getIntent();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postdetails);
-        user_title.setText(intent.getStringExtra("postauther"));
-        posticon.setImageResource(intent.getIntExtra("postIcon",R.drawable.account_24));
+        user_title.setText(intent.getStringExtra("User_Title"));
+        posticon.setImageResource(intent.getIntExtra("post_icon",R.drawable.account_24));
         user_title = findViewById(R.id.FaceBook_UserTitle2);
         user_icon = findViewById(R.id.FaceBook_userIcon2);
         time=findViewById(R.id.Time2);

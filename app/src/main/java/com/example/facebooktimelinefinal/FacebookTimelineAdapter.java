@@ -20,7 +20,7 @@ public class FacebookTimelineAdapter extends RecyclerView.Adapter<FacebookTimeli
         this.data = data;
     }
 
-    OnItemClick Onitemclick = null;
+    OnItemClick Onitemclick;
 
     @NonNull
     @Override
