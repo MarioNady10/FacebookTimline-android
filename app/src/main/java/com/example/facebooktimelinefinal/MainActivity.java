@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void OnItemclick(Facebook_Items facebook_items) {
                 Intent intent = new Intent(MainActivity.this, postdetails.class);
-                intent.putExtra("postauthe", Facebook_Items.class);
+                intent.putExtra("postauther", facebook_items.User_Title);
+                intent.putExtra("postIcon", facebook_items.post_icon);
                 startActivity(intent);
             }
         };

@@ -1,6 +1,6 @@
 package com.example.facebooktimelinefinal;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +31,7 @@ public class FacebookTimelineAdapter extends RecyclerView.Adapter<FacebookTimeli
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FacebookViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FacebookViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.User_title.setText(data.get(position).getUser_Title());
         holder.Time.setText(data.get(position).getTime());
         holder.Post_text.setText(data.get(position).getPost_text());
@@ -42,7 +42,14 @@ public class FacebookTimelineAdapter extends RecyclerView.Adapter<FacebookTimeli
         holder.Like_image.setImageResource(data.get(position).getLike_image());
         holder.User_icon.setImageResource(data.get(position).getUser_icon());
         holder.Post_icon.setImageResource(data.get(position).getPost_icon());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.User_title.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Onitemclick.OnItemclick(data.get(position));
+            }
+        });
+        holder.Post_icon.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -57,7 +64,7 @@ public class FacebookTimelineAdapter extends RecyclerView.Adapter<FacebookTimeli
         return data.size();
     }
 
-    class FacebookViewHolder extends RecyclerView.ViewHolder {
+    static class FacebookViewHolder extends RecyclerView.ViewHolder {
         TextView User_title, Time, Post_text, Like_count;
         Button Like_button, Comment_button, Share_button;
         ImageView Post_icon, User_icon, Like_image;
