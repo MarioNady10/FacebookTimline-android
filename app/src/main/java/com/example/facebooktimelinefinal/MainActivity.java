@@ -36,8 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void intializedata() {
         data = new ArrayList<Facebook_Items>(1000);
-        for (int i = 0; i < 1000; i++) {
-            data.add(new Facebook_Items("User ", "$i", "hello $i", "$i", "like $i", "comment $i", "share $i", R.drawable.like_24, R.drawable.post_photo_24, R.drawable.account_24));
+        for (int i = 1; i < 1000; i++) {
+            data.add(new Facebook_Items("User "+i, +i +"h",
+                    "hello user"+i, ""+i, "like "+i,
+                    "comment "+i,
+                    "share "+i, R.drawable.like_24,
+                    R.drawable.post_photo_24, R.drawable.account_24));
         }
     }
 }

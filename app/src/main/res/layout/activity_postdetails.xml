@@ -5,5 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".postdetails">
+    <ImageView
+        android:id="@+id/FaceBook_userIcon2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="0dp"
+        android:src="@drawable/account_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FaceBook_UserTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/FaceBook_userIcon2"
+        app:layout_constraintTop_toTopOf="@id/FaceBook_userIcon2" />
+    <TextView
+        android:id="@+id/Time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/FaceBook_userIcon2"
+        app:layout_constraintTop_toBottomOf="@id/FaceBook_UserTitle2" />
+    <ImageView
+        android:id="@+id/post_Icon2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/post_photo_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
